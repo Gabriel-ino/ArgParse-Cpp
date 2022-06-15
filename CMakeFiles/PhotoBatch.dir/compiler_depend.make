@@ -186,8 +186,43 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: PhotoBatch.cpp \
   /usr/include/c++/12/bits/istream.tcc \
   ArgParser.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h
 
+
+/usr/include/c++/12/bits/stl_tempbuf.h:
+
+/usr/include/c++/12/bits/stl_heap.h:
+
+/usr/include/c++/12/bits/stl_algo.h:
+
+/usr/include/c++/12/algorithm:
+
+/usr/include/c++/12/bits/erase_if.h:
+
+/usr/include/c++/12/bits/stl_multimap.h:
+
+/usr/include/c++/12/bits/stl_map.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
+
+/usr/include/c++/12/map:
 
 /usr/include/string.h:
 
@@ -199,9 +234,13 @@ ArgParser.h:
 
 /usr/include/c++/12/cwctype:
 
+/usr/include/c++/12/tuple:
+
 /usr/include/c++/12/bits/ostream.tcc:
 
 /usr/include/c++/12/bits/locale_facets.h:
+
+/usr/include/c++/12/pstl/execution_defs.h:
 
 /usr/include/c++/12/bits/basic_ios.h:
 
@@ -281,6 +320,8 @@ ArgParser.h:
 
 /usr/include/bits/sched.h:
 
+/usr/include/c++/12/bits/algorithmfwd.h:
+
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/time64.h:
@@ -312,6 +353,8 @@ ArgParser.h:
 /usr/include/bits/typesizes.h:
 
 /usr/include/c++/12/new:
+
+/usr/include/c++/12/bits/uniform_int_dist.h:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/error_constants.h:
 
@@ -379,6 +422,8 @@ PhotoBatch.cpp:
 
 /usr/include/c++/12/ext/atomicity.h:
 
+/usr/include/c++/12/bits/node_handle.h:
+
 /usr/include/c++/12/cstdint:
 
 /usr/include/pthread.h:
@@ -425,6 +470,8 @@ PhotoBatch.cpp:
 
 /usr/include/bits/floatn-common.h:
 
+/usr/include/c++/12/bits/uses_allocator.h:
+
 /usr/include/sys/cdefs.h:
 
 /usr/include/c++/12/bits/stl_iterator_base_funcs.h:
@@ -467,6 +514,8 @@ PhotoBatch.cpp:
 
 /usr/include/bits/types/time_t.h:
 
+/usr/include/c++/12/bits/stl_tree.h:
+
 /usr/include/bits/types/struct_itimerspec.h:
 
 /usr/include/c++/12/ios:
@@ -492,6 +541,8 @@ PhotoBatch.cpp:
 /usr/include/c++/12/bits/basic_string.tcc:
 
 /usr/include/bits/types/struct_timeval.h:
+
+/usr/include/c++/12/pstl/glue_algorithm_defs.h:
 
 /usr/include/bits/types/clockid_t.h:
 
