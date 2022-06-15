@@ -1,0 +1,3 @@
+/home/gabrielchavesmartins/photobatch/CMakeFiles/PhotoBatch.dir
+/home/gabrielchavesmartins/photobatch/CMakeFiles/edit_cache.dir
+/home/gabrielchavesmartins/photobatch/CMakeFiles/rebuild_cache.dir

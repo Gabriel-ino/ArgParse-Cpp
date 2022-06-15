@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o -o PhotoBatch 
