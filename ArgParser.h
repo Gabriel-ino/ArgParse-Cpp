@@ -33,7 +33,8 @@ class ArgParser{
 
 			bool isAllBlank = check_all_blank(option);
 
-			if (!option.empty()){
+			if (!option.empty() || isAllBlank == false){
+				m_Options[option] = "";
 
 			}
 		
@@ -42,13 +43,7 @@ class ArgParser{
 		
 		// Get flag's value during parse
 		bool GetFlag(const std::string& flag){
-			bool isAllBlank = true;
-
-			for (const char& c :flag){
-				if (!isblank(c)){
-					isAllBlank = false;
-				}
-			}
+			bool isAllBlank = check_all_blank(flag);
 
 			if (!flag.empty() || isAllBlank == false){
 				auto flagIterator = m_Flags.find(flag);
@@ -61,10 +56,29 @@ class ArgParser{
 			return false;}
 		
 
-		// Get option's value during the parser
-		const std::string& GetOption(const std::string& option){
-			return "";		
+
+		// Get option's value as float type
+		float GetOptionAsFloat(const std::string& option) const{
+			const std::string& optionValue = GetOption(option);
+			if (!optionValue.empty()){
+				return std::stof(optionValue);
+			}
+			return -1;
+			
 		}
+
+		int GetOptionAsInt(const std::string& option) const{
+			const std::string& optionValue = GetOption(option);
+			bool isAllBlank = check_all_blank(optionValue);
+			if (!optionValue.empty()){
+				return std::stoi(optionValue);
+			}
+
+			return 0;
+		
+		}
+
+		std::string GetOptionAsString(const std::string& option) const {return GetOption(option);}
 		
 		// Parse the arguments list on argv
 		void Parse(int argc, char* argv[]){
@@ -88,6 +102,18 @@ class ArgParser{
 							// Now let's check if the = characters is in the string
 							if (arg.find_first_of('=') != std::string::npos){
 								// It's a option!
+								const size_t equalPos = arg.find('=');
+								if (equalPos != std::string::npos){
+									std::string optionName = arg.substr(0, equalPos);
+									std::string optionValue = arg.substr(equalPos + 1);
+									auto optionIterator = m_Options.find(optionName);
+									if (optionIterator != std::end(m_Options)){
+											optionIterator->second = optionValue;
+									}
+
+								}
+								
+
 							}else{
 								// It's a flag!
 								auto flagIterator = m_Flags.find(arg); // The iterator is a pointer equivalent
@@ -110,6 +136,22 @@ class ArgParser{
 
 		std::map<std::string, bool> m_Flags;
 		std::map<std::string, std::string> m_Options;
+
+		// Get option's value during the parser
+                const std::string& GetOption(const std::string& option) const{
+			bool isAllBlank = check_all_blank(option);
+                        if (!option.empty() || isAllBlank == false){
+                                auto optionIterator = m_Options.find(option);
+
+                                if (optionIterator != std::end(m_Options)){
+                                        return optionIterator->second;
+                                }
+                        }
+
+                        static std::string EmptyOption = "";
+                        return EmptyOption;
+                }
+
 
 };
 
