@@ -6,28 +6,41 @@
 #include <ctype.h>
 #include <map>
 #include <algorithm>
+#include "utils.h"
 
 //Class used to read the arguments passed by the user on the terminal
-
+/* E.g.: ArgParser argparser;
+ * argparser.RegisterFlag("Rename");
+ * argparser.Parse(argc, argv);
+ * argparser.GetFlag("Rename");
+ *
+ * 
+ * */
 class ArgParser{
 	public:
+		// Register flag during parser
 		void RegisterFlag(const std::string& flag){
-			bool isAllBlank = true;
-			
-			for (const char& c : flag){
-				if (!isblank(c)){
-					isAllBlank = false;
-				}
-			}
+			bool isAllBlank = check_all_blank(flag);
 
 			if (!flag.empty() || isAllBlank == false){
 				m_Flags[flag] = false;
 			}
 
 		}
+		
+		// Register option during the parser
+		void RegisterOption(const std::string& option){
 
+			bool isAllBlank = check_all_blank(option);
 
+			if (!option.empty()){
 
+			}
+		
+		}
+
+		
+		// Get flag's value during parse
 		bool GetFlag(const std::string& flag){
 			bool isAllBlank = true;
 
@@ -48,7 +61,12 @@ class ArgParser{
 			return false;}
 		
 
-
+		// Get option's value during the parser
+		const std::string& GetOption(const std::string& option){
+			return "";		
+		}
+		
+		// Parse the arguments list on argv
 		void Parse(int argc, char* argv[]){
 			if (argc > 1){
 				for (int index = 1; index < argc; ++index){
@@ -91,6 +109,7 @@ class ArgParser{
 	private:
 
 		std::map<std::string, bool> m_Flags;
+		std::map<std::string, std::string> m_Options;
 
 };
 

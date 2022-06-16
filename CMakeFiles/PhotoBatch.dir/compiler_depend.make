@@ -203,8 +203,11 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: PhotoBatch.cpp \
   /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/12/pstl/execution_defs.h
+  /usr/include/c++/12/pstl/execution_defs.h \
+  utils.h
 
+
+utils.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
 
