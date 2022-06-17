@@ -204,7 +204,8 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: PhotoBatch.cpp \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
   /usr/include/c++/12/pstl/execution_defs.h \
-  utils.h
+  utils.h \
+  /usr/include/c++/12/stdlib.h
 
 
 utils.h:
@@ -596,6 +597,8 @@ PhotoBatch.cpp:
 /usr/include/c++/12/pstl/pstl_config.h:
 
 /usr/include/c++/12/ext/numeric_traits.h:
+
+/usr/include/c++/12/stdlib.h:
 
 /usr/include/c++/12/cerrno:
 

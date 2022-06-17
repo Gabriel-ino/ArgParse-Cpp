@@ -11,6 +11,42 @@
 #define AMOUNT_OPTION "amount"
 
 
+#ifdef __unix__
+        #include <stdlib.h>
+	#define SYSTEM_WARNING "\033[1;31mJUST ONE MODE CAN BE ACTIVE!"
+	#define RESET_TERMINAL std::cout << "\033[1;0m \033[0m" << std::endl
+#elif defined(_WIN32) || defined(WIN32)
+        #define OS_Windows
+        #include <windows.h>
+	#define WARNING_TERMINAL system("Color 04")
+	#define RESET_TERMINAL system("Color 07")
+#endif
+
+const void ThrowExceptionArguments(const ArgParser& argparser){
+        // Read the flags that the user puts
+
+        const bool bRenameMode = argparser.GetFlag(RENAME_FLAG);
+	const bool bConvertMode = argparser.GetFlag(CONVERT_FLAG);
+	const bool bResizeMode = argparser.GetFlag(RESIZE_FLAG);
+	const bool bScaleMode = argparser.GetFlag(SCALE_FLAG);
+	
+	// Verify if just one flag is active
+	
+	if (!(bRenameMode ^ bConvertMode ^ bResizeMode ^ bScaleMode)){ // Not . Exclusive or
+		// If more than 1 mode is active, launch exception
+		#ifdef __unix__
+			throw std::invalid_argument(SYSTEM_WARNING);
+
+		#else
+			throw std::invalid_argument("Just one mode can be active");
+
+
+		#endif	
+	}
+}
+	
+
+
 int main(int argc, char* argv[]){
 	setlocale(LC_ALL, "");
 	setlocale(LC_NUMERIC, "en_US");
@@ -27,16 +63,20 @@ int main(int argc, char* argv[]){
 
 	argparse.Parse(argc, argv);
 	
-
-	std::cout << std::boolalpha << "Rename\t" << argparse.GetFlag(RENAME_FLAG) << std::endl;
-	std::cout << std::boolalpha << "Convert\t" << argparse.GetFlag(CONVERT_FLAG) << std::endl;
-	std::cout << std::boolalpha << "Resize\t" << argparse.GetFlag(RESIZE_FLAG) << std::endl;
-	std::cout << std::boolalpha << "Scale\t" << argparse.GetFlag(SCALE_FLAG) << std::endl;
-
-	std::cout << std::boolalpha << "Folder= " << argparse.GetOptionAsString(FOLDER_OPTION) << std::endl;
-	std::cout << std::boolalpha << "Amount= " << argparse.GetOptionAsInt(AMOUNT_OPTION) << std::endl;
+	try{
+	    ThrowExceptionArguments(argparse);
+	}catch(const std::exception& exception){
+               #ifdef __unix
+	           std::cerr << exception.what() << std::endl;
+	           RESET_TERMINAL;
+               #else
+		   system("Color 04");
+		   std::cerr << exception.what() << std::endl;
+	       #endif
+	}
 
 	std::cin.get();
-
+	
+	
 	return 0;
 }

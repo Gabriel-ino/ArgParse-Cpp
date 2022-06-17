@@ -42,7 +42,7 @@ class ArgParser{
 
 		
 		// Get flag's value during parse
-		bool GetFlag(const std::string& flag){
+		bool GetFlag(const std::string& flag) const{
 			bool isAllBlank = check_all_blank(flag);
 
 			if (!flag.empty() || isAllBlank == false){
