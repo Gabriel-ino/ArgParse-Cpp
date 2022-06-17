@@ -184,16 +184,44 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: PhotoBatch.cpp \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
   ArgParser.h \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/ext/aligned_buffer.h \
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/uses_allocator.h \
   /usr/include/c++/12/bits/stl_multimap.h \
   /usr/include/c++/12/bits/erase_if.h \
   /usr/include/c++/12/algorithm \
@@ -224,17 +252,45 @@ utils.h:
 
 /usr/include/c++/12/bits/stl_map.h:
 
-/usr/include/c++/12/ext/aligned_buffer.h:
-
 /usr/include/c++/12/map:
 
 /usr/include/string.h:
 
 ArgParser.h:
 
+/usr/include/c++/12/bits/fs_ops.h:
+
+/usr/include/c++/12/bits/fs_dir.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
+
+/usr/include/c++/12/sstream:
+
+/usr/include/c++/12/iomanip:
+
+/usr/include/c++/12/bits/locale_conv.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12/bits/codecvt.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h:
+
+/usr/include/c++/12/locale:
+
+/usr/include/c++/12/limits:
+
+/usr/include/c++/12/ratio:
+
+/usr/include/c++/12/ctime:
+
 /usr/include/c++/12/bits/basic_ios.tcc:
 
 /usr/include/c++/12/bits/locale_facets.tcc:
+
+/usr/include/c++/12/bits/unique_ptr.h:
 
 /usr/include/c++/12/cwctype:
 
@@ -247,6 +303,8 @@ ArgParser.h:
 /usr/include/c++/12/pstl/execution_defs.h:
 
 /usr/include/c++/12/bits/basic_ios.h:
+
+/usr/include/c++/12/bits/parse_numbers.h:
 
 /usr/include/c++/12/bits/streambuf.tcc:
 
@@ -274,6 +332,8 @@ ArgParser.h:
 
 /usr/include/bits/types/sigset_t.h:
 
+/usr/include/c++/12/bits/locale_facets_nonio.h:
+
 /usr/include/bits/select.h:
 
 /usr/include/sys/select.h:
@@ -281,6 +341,8 @@ ArgParser.h:
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/byteswap.h:
+
+/usr/include/c++/12/ext/concurrence.h:
 
 /usr/include/endian.h:
 
@@ -299,6 +361,8 @@ ArgParser.h:
 /usr/include/c++/12/bits/functional_hash.h:
 
 /usr/include/c++/12/bits/stl_construct.h:
+
+/usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h:
 
 /usr/include/c++/12/bits/alloc_traits.h:
 
@@ -346,6 +410,8 @@ ArgParser.h:
 
 /usr/include/c++/12/bits/exception_ptr.h:
 
+/usr/include/c++/12/bits/fs_path.h:
+
 /usr/include/bits/wchar.h:
 
 /usr/include/bits/types/struct_tm.h:
@@ -356,9 +422,13 @@ ArgParser.h:
 
 /usr/include/bits/typesizes.h:
 
+/usr/include/c++/12/bits/quoted_string.h:
+
 /usr/include/c++/12/new:
 
 /usr/include/c++/12/bits/uniform_int_dist.h:
+
+/usr/include/c++/12/codecvt:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/error_constants.h:
 
@@ -390,6 +460,8 @@ ArgParser.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/12/include/stdint.h:
 
+/usr/include/c++/12/bits/chrono.h:
+
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/12/ext/alloc_traits.h:
@@ -408,11 +480,15 @@ ArgParser.h:
 
 /usr/include/bits/stdint-intn.h:
 
+/usr/include/c++/12/bits/shared_ptr.h:
+
 /usr/include/c++/12/initializer_list:
 
 /usr/include/sched.h:
 
 /usr/include/c++/12/iostream:
+
+/usr/include/c++/12/bits/shared_ptr_base.h:
 
 /usr/include/bits/types/__fpos_t.h:
 
@@ -554,9 +630,13 @@ PhotoBatch.cpp:
 
 /usr/include/bits/types/timer_t.h:
 
+/usr/include/c++/12/bits/sstream.tcc:
+
 /usr/include/c++/12/cstdlib:
 
 /usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/12/filesystem:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/ctype_inline.h:
 
@@ -570,9 +650,13 @@ PhotoBatch.cpp:
 
 /usr/include/bits/setjmp.h:
 
+/usr/include/c++/12/bits/allocated_ptr.h:
+
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/bits/types/__sigset_t.h:
+
+/usr/include/c++/12/bits/fs_fwd.h:
 
 /usr/include/c++/12/bits/memoryfwd.h:
 
