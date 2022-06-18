@@ -228,4 +228,8 @@ Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o: \
  /home/gabrielchavesmartins/photobatch/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
  /home/gabrielchavesmartins/photobatch/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
  /home/gabrielchavesmartins/photobatch/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
- /home/gabrielchavesmartins/photobatch/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h
+ /home/gabrielchavesmartins/photobatch/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+ /home/gabrielchavesmartins/photobatch/ArgParser.h \
+ /usr/include/c++/12/algorithm \
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+ /home/gabrielchavesmartins/photobatch/utils.h
