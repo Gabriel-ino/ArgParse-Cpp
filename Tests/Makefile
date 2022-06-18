@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabrielchavesmartins/photobatch/Tests
+CMAKE_SOURCE_DIR = /home/gabrielchavesmartins/photobatch
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabrielchavesmartins/photobatch/Tests
+CMAKE_BINARY_DIR = /home/gabrielchavesmartins/photobatch
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/Tests/CMakeFiles /home/gabrielchavesmartins/photobatch/Tests//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/Tests/CMakeFiles 0
+	cd /home/gabrielchavesmartins/photobatch && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/CMakeFiles /home/gabrielchavesmartins/photobatch/Tests//CMakeFiles/progress.marks
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,98 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gabrielchavesmartins/photobatch && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named testArgumentParser
+# Convenience name for target.
+Tests/CMakeFiles/testArgumentParser.dir/rule:
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/CMakeFiles/testArgumentParser.dir/rule
+.PHONY : Tests/CMakeFiles/testArgumentParser.dir/rule
 
-# Build rule for target.
-testArgumentParser: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testArgumentParser
+# Convenience name for target.
+testArgumentParser: Tests/CMakeFiles/testArgumentParser.dir/rule
 .PHONY : testArgumentParser
 
 # fast build rule for target.
 testArgumentParser/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testArgumentParser.dir/build.make CMakeFiles/testArgumentParser.dir/build
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/build
 .PHONY : testArgumentParser/fast
 
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-# target to build an object file
-testArgumentParser.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testArgumentParser.dir/build.make CMakeFiles/testArgumentParser.dir/testArgumentParser.o
+testArgumentParser.o: testArgumentParser.cpp.o
 .PHONY : testArgumentParser.o
 
-# target to preprocess a source file
-testArgumentParser.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testArgumentParser.dir/build.make CMakeFiles/testArgumentParser.dir/testArgumentParser.i
+# target to build an object file
+testArgumentParser.cpp.o:
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o
+.PHONY : testArgumentParser.cpp.o
+
+testArgumentParser.i: testArgumentParser.cpp.i
 .PHONY : testArgumentParser.i
 
-# target to generate assembly for a file
-testArgumentParser.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testArgumentParser.dir/build.make CMakeFiles/testArgumentParser.dir/testArgumentParser.s
+# target to preprocess a source file
+testArgumentParser.cpp.i:
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.i
+.PHONY : testArgumentParser.cpp.i
+
+testArgumentParser.s: testArgumentParser.cpp.s
 .PHONY : testArgumentParser.s
+
+# target to generate assembly for a file
+testArgumentParser.cpp.s:
+	cd /home/gabrielchavesmartins/photobatch && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.s
+.PHONY : testArgumentParser.cpp.s
 
 # Help Target
 help:
@@ -253,10 +211,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
 	@echo "... testArgumentParser"
 	@echo "... testArgumentParser.o"
 	@echo "... testArgumentParser.i"
@@ -272,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gabrielchavesmartins/photobatch && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

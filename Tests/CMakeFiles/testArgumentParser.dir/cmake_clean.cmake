@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/testArgumentParser.dir/testArgumentParser.o"
-  "CMakeFiles/testArgumentParser.dir/testArgumentParser.o.d"
+  "CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o"
+  "CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o.d"
   "testArgumentParser"
   "testArgumentParser.pdb"
 )

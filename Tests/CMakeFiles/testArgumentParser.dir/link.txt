@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/testArgumentParser.dir/testArgumentParser.o -o testArgumentParser  lib/libgtest_main.a lib/libgtest.a 
+/usr/bin/c++ CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o -o testArgumentParser  ../lib/libgtest_main.a ../lib/libgtest.a 
