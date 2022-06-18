@@ -7,11 +7,13 @@
 
 #include "ArgParser.h"
 #include "utils.h"
+#include "help.h"
 
 #define RENAME_FLAG "rename"
 #define CONVERT_FLAG "convert"
 #define RESIZE_FLAG "resize"
 #define SCALE_FLAG "scale"
+#define HELP_FLAG "help"
 
 #define FOLDER_OPTION "folder"
 #define AMOUNT_OPTION "amount"
@@ -69,6 +71,12 @@ const bool HasInvalidChars(const std::string& passed_str){
 
 const void ThrowExceptionArguments(const ArgParser& argparser){
         // Read the flags that the user puts
+
+	const bool bHelpMode = argparser.GetFlag(HELP_FLAG);
+	if (bHelpMode){
+		displayHelp();
+	}
+
 
         const bool bRenameMode = argparser.GetFlag(RENAME_FLAG);
 	const bool bConvertMode = argparser.GetFlag(CONVERT_FLAG);
@@ -209,6 +217,7 @@ int main(int argc, char* argv[]){
 	argparse.RegisterFlag(CONVERT_FLAG);
 	argparse.RegisterFlag(RESIZE_FLAG);
 	argparse.RegisterFlag(SCALE_FLAG);
+	argparse.RegisterFlag(HELP_FLAG);
 
 	argparse.RegisterOption(FOLDER_OPTION);
 	argparse.RegisterOption(AMOUNT_OPTION);

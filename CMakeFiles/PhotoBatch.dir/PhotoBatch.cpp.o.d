@@ -163,4 +163,8 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
  /home/gabrielchavesmartins/photobatch/utils.h \
- /usr/include/c++/12/stdlib.h
+ /home/gabrielchavesmartins/photobatch/help.h \
+ /usr/include/c++/12/stdlib.h /usr/include/c++/12/fstream \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc
