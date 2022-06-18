@@ -5,3 +5,5 @@ project(PhotoBatch)
 add_executable(PhotoBatch "PhotoBatch.cpp")
 
 set_target_properties(PhotoBatch PROPERTIES CXX_STANDARD 17)
+
+add_subdirectory(Tests)
