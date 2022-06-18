@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <sstream>
 #include <string>
+#include <array>
 
 #include "ArgParser.h"
 #include "utils.h"
@@ -19,7 +20,8 @@
 #define HEIGHT_OPTION "height"
 #define PREFIX_OPTION "prefix"
 #define START_NUMBER_OPTION "startnumber"
-
+#define FROM_OPTION "from"
+#define TO_OPTION "to"
 
 #ifdef __unix__
         #include <stdlib.h>
@@ -33,6 +35,8 @@
 	#define NaN "\033[1;31m VALUE MUST BE A NUMBER"
 	#define AMOUNT_WARNING "\033[1;31m AMOUNT MUST BE GREATER THAN ZERO"
 	#define START_NUMBER_ERROR "\033[1;31m START NUMBER MUST BE POSITIVE OR ZERO"
+	#define INVALID_FORMAT "\033[1;31mINVALID FORMAT OR FORMAT NOT SUPPORTED"
+	#define EQUAL_FORMAT_ERROR "\033[1;31mFORMATS ARE EQUAL"
 
 #elif defined(_WIN32) || defined(WIN32)
         #define OS_Windows
@@ -48,6 +52,8 @@
 	#define NaN "VALUE MUST BE A NUMBER"
 	#define AMOUNT_WARNING "AMOUNT MUST BE GREATER THAN ZERO"
 	#define START_NUMBER_ERROR "START NUMBER MUST BE POSITIVE OR ZERO"
+	#define INVALID_FORMAT "INVALID FORMAT OR FORMAT NOT SUPPORTED"
+	#define EQUAL_FORMAT_ERROR "FORMATS ARE EQUAL"
 #endif
 
 const std::string& GetInvalidChars(){
@@ -168,6 +174,27 @@ const void ThrowExceptionArguments(const ArgParser& argparser){
 			throw std::invalid_argument(concatenatedErrors.str());
 		}
 	}
+
+	//Validate Convert Mode
+	if (bConvertMode){
+		const std::string from = argparser.GetOptionAsString(FROM_OPTION);
+		const std::string to = argparser.GetOptionAsString(TO_OPTION);
+
+		const std::array<std::string, 2> convertOptions = {"jpg", "png"};
+		const bool bIsFromValid = std::find(std::begin(convertOptions), std::end(convertOptions), from) != std::end(convertOptions);
+
+		const bool bIsToValid = std::find(std::begin(convertOptions), std::end(convertOptions), to) != std::end(convertOptions);
+
+		if (!bIsFromValid || !bIsToValid){
+			throw std::invalid_argument(INVALID_FORMAT);
+		}
+
+		if (from == to){
+			throw std::invalid_argument(EQUAL_FORMAT_ERROR);
+		}
+
+	}
+
 }
 	
 
@@ -190,6 +217,9 @@ int main(int argc, char* argv[]){
 	argparse.RegisterOption(HEIGHT_OPTION);
 	argparse.RegisterOption(PREFIX_OPTION);
 	argparse.RegisterOption(START_NUMBER_OPTION);
+	argparse.RegisterOption(FROM_OPTION);
+	argparse.RegisterOption(TO_OPTION);
+
 
 	argparse.Parse(argc, argv);
 	

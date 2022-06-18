@@ -215,6 +215,8 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: PhotoBatch.cpp \
   /usr/include/c++/12/ext/aligned_buffer.h \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
   ArgParser.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -257,6 +259,10 @@ utils.h:
 /usr/include/string.h:
 
 ArgParser.h:
+
+/usr/include/c++/12/compare:
+
+/usr/include/c++/12/array:
 
 /usr/include/c++/12/bits/fs_ops.h:
 
