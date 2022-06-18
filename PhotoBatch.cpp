@@ -17,6 +17,8 @@
 #define FILTER_OPTION "filter"
 #define WIDTH_OPTION "width"
 #define HEIGHT_OPTION "height"
+#define PREFIX_OPTION "prefix"
+#define START_NUMBER_OPTION "startnumber"
 
 
 #ifdef __unix__
@@ -27,8 +29,10 @@
 	#define INVALID_CHARACTERS "\033[1;31mFILTER CANNOT CONTAIN THESE ARGUMENTS: " 
 	#define RESET_TERMINAL std::cout << "\033[1;0m \033[0m" << std::endl
 	#define WRONG_SIZE "\033[1;31mINVALID VALUE, PLEASE CHECK IF THE PASSED WIDTH AND HEIGHT ARE GREATER THEN ZERO"
-	#define RESIZE_FILTER_ERROR "\033[1;31m ON RESIZE MODE, FILTER OPTION CAN'T BE EMPTY!"
+	#define FILTER_ERROR "\033[1;31mFILTER OPTION CAN'T BE EMPTY!"
 	#define NaN "\033[1;31m VALUE MUST BE A NUMBER"
+	#define AMOUNT_WARNING "\033[1;31m AMOUNT MUST BE GREATER THAN ZERO"
+	#define START_NUMBER_ERROR "\033[1;31m START NUMBER MUST BE POSITIVE OR ZERO"
 
 #elif defined(_WIN32) || defined(WIN32)
         #define OS_Windows
@@ -40,9 +44,22 @@
 	#define SYSTEM_WARNING "JUST ONE MODE CAN BE ACTIVE!\nCHECK IF YOU PUT MORE THEN ONE OPTION OR NO OPTION"
 	#define INVALID_CHARACTERS "FILTER CANNOT CONTAIN THESE ARGUMENTS: "
 	#define WRONG_SIZE "INVALID VALUE, PLEASE CHECK IF THE PASSED WIDTH AND HEIGHT ARE GREATER THEN ZERO"
-	#define RESIZE_FILTER_ERROR "ON RESIZE MODE, FILTER OPTION CAN'T BE EMPTY!"
+	#define FILTER_ERROR "FILTER OPTION CAN'T BE EMPTY!"
 	#define NaN "VALUE MUST BE A NUMBER"
+	#define AMOUNT_WARNING "AMOUNT MUST BE GREATER THAN ZERO"
+	#define START_NUMBER_ERROR "START NUMBER MUST BE POSITIVE OR ZERO"
 #endif
+
+const std::string& GetInvalidChars(){
+	static const std::string invalidChars = "\\/*?\"<>|:";
+	return invalidChars;
+}
+
+const bool HasInvalidChars(const std::string& passed_str){
+        const bool verifier = passed_str.find_first_of(GetInvalidChars()) != std::string::npos;
+	return verifier;
+
+}
 
 const void ThrowExceptionArguments(const ArgParser& argparser){
         // Read the flags that the user puts
@@ -78,13 +95,11 @@ const void ThrowExceptionArguments(const ArgParser& argparser){
 	//Validate passed filter
 	const std::string filter = argparser.GetOptionAsString(FILTER_OPTION);
 	bool checkBlankFilter = check_all_blank(filter);
-        if (!filter.empty() || checkBlankFilter == false){
-		const std::string invalidChars = "\\/*?\"<>|:";
-		if (filter.find_first_of(invalidChars) != std::string::npos){
-			std::stringstream concatenatedStrings;
-			concatenatedStrings << INVALID_CHARACTERS << invalidChars;
-			throw std::invalid_argument(concatenatedStrings.str());
-		}
+        if ((!filter.empty() && HasInvalidChars(filter)) || checkBlankFilter == false){
+		std::stringstream concatenatedStrings;
+		concatenatedStrings << INVALID_CHARACTERS << GetInvalidChars();
+		throw std::invalid_argument(concatenatedStrings.str());
+		
 
        }
 
@@ -95,7 +110,7 @@ const void ThrowExceptionArguments(const ArgParser& argparser){
 		try{
 			width = argparser.GetOptionAsInt(WIDTH_OPTION);
 			height = argparser.GetOptionAsInt(HEIGHT_OPTION);
-		}catch(std::invalid_argument& err){
+		}catch(std::invalid_argument&){
 			throw(NaN);
 		}
 
@@ -105,11 +120,54 @@ const void ThrowExceptionArguments(const ArgParser& argparser){
 		}
 
 		if (filter.empty()){
-			throw std::invalid_argument(RESIZE_FILTER_ERROR);
+			std::stringstream concatenateFilter;
+			concatenateFilter << FILTER_ERROR << " ON RESIZE MODE";
+			throw std::invalid_argument(concatenateFilter.str());
 		}
+
+	}
+
+	//Validate Scale Mode
+	if (bScaleMode){
+
+
+		float amount = 0.0f;
+		try{       
+			amount = argparser.GetOptionAsFloat(AMOUNT_OPTION);
+
+		}catch(std::invalid_argument&){
+			throw(NaN);
+		}
+
+		// Amount must be greater than zero on amount option
+		if (amount <= 0){
+			throw std::invalid_argument(AMOUNT_WARNING);
+		}
+
+		if (filter.empty()){
+			std::stringstream concatenateFilterAmount;
+			concatenateFilterAmount << FILTER_ERROR << "ON AMOUNT MODE";		
+			throw std::invalid_argument(concatenateFilterAmount.str());
+		}
+
 
 	}	
 	
+	//Validate Rename Mode
+	if (bRenameMode){
+		int startNumber = argparser.GetOptionAsInt(START_NUMBER_OPTION);
+		std::string prefix = argparser.GetOptionAsString(PREFIX_OPTION);
+
+		if (startNumber < 0){
+			throw std::invalid_argument(START_NUMBER_ERROR);
+		}
+
+		if (prefix.empty() || HasInvalidChars(prefix) || check_all_blank(prefix)){
+			std::stringstream concatenatedErrors;
+			concatenatedErrors << INVALID_CHARACTERS << GetInvalidChars() << "\n" << "PREFIX CAN'T BE EMPTY OR BLANK!"; 
+			throw std::invalid_argument(concatenatedErrors.str());
+		}
+	}
 }
 	
 
@@ -130,6 +188,8 @@ int main(int argc, char* argv[]){
 	argparse.RegisterOption(FILTER_OPTION);
 	argparse.RegisterOption(WIDTH_OPTION);
 	argparse.RegisterOption(HEIGHT_OPTION);
+	argparse.RegisterOption(PREFIX_OPTION);
+	argparse.RegisterOption(START_NUMBER_OPTION);
 
 	argparse.Parse(argc, argv);
 	
