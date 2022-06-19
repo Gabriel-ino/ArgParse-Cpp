@@ -18,7 +18,7 @@ TEST(TestArgumentParser, RegisterFlag_With_Whitespace){
 	ArgParser argParser;
 	argParser.RegisterFlag("Random Flag");
 	
-	EXPECT_TRUE(argParser.IsFlagRegistered("Random Flag"));
+	EXPECT_FALSE(argParser.IsFlagRegistered("Random Flag"));
 }
 
 TEST(TestArgumentParser, RegisterFlag_Whitespace_Only){
@@ -26,4 +26,18 @@ TEST(TestArgumentParser, RegisterFlag_Whitespace_Only){
 	argParser.RegisterFlag(" ");
 	EXPECT_FALSE(argParser.IsFlagRegistered(" "));
 
+}
+
+TEST(TestArgumentParser, RegisterOption){
+	ArgParser argParser;
+	argParser.RegisterOption("NewOption");
+
+	EXPECT_TRUE(argParser.IsOptionRegistered("NewOption"));
+}
+
+TEST(TestArgumentParser, RegisterOption_With_Whitespace){
+	ArgParser argParser;
+	argParser.RegisterOption("New Option");
+
+	EXPECT_FALSE(argParser.IsOptionRegistered("New Option"));
 }

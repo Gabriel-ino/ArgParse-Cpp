@@ -18,4 +18,14 @@ bool check_all_blank(const std::string& val){
 	return isAllBlank;
 }	
 
+bool check_blank_param(const std::string& flag){
+	for (const char& c : flag){
+		if (isblank(c)){
+			return true;
+		}
+	}
+
+	return false;
+}
+
 #endif

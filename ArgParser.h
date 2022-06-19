@@ -22,7 +22,7 @@ class ArgParser{
 		void RegisterFlag(const std::string& flag){
 			bool isAllBlank = check_all_blank(flag);
 
-			if (!flag.empty() && isAllBlank == false){
+			if (!flag.empty() && isAllBlank == false && check_blank_param(flag)==false){
 				m_Flags[flag] = false;
 			}
 
@@ -41,11 +41,18 @@ class ArgParser{
 
 			bool isAllBlank = check_all_blank(option);
 
-			if (!option.empty() || isAllBlank == false){
+			if (!option.empty() && isAllBlank == false && check_blank_param(option)==false){
 				m_Options[option] = "";
 
 			}
 		
+		}
+
+		bool IsOptionRegistered(const std::string& option){
+			if (!option.empty()){
+				return m_Options.count(option) == 1;
+			}
+			return false;
 		}
 
 		
