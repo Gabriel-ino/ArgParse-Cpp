@@ -22,10 +22,18 @@ class ArgParser{
 		void RegisterFlag(const std::string& flag){
 			bool isAllBlank = check_all_blank(flag);
 
-			if (!flag.empty() || isAllBlank == false){
+			if (!flag.empty() && isAllBlank == false){
 				m_Flags[flag] = false;
 			}
 
+		}
+
+		// Returns the boolean value that verifies if the flag is registered
+		bool IsFlagRegistered(const std::string& flag) const{
+			if (!flag.empty()){
+				return m_Flags.count(flag) == 1;
+			}
+			return false;
 		}
 		
 		// Register option during the parser

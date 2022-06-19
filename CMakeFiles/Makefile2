@@ -174,8 +174,8 @@ CMakeFiles/PhotoBatch.dir/clean:
 # Target rules for target Tests/CMakeFiles/testArgumentParser.dir
 
 # All Build rule for target.
-Tests/CMakeFiles/testArgumentParser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 Tests/CMakeFiles/testArgumentParser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+Tests/CMakeFiles/testArgumentParser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=11,12 "Built target testArgumentParser"
