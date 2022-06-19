@@ -232,4 +232,10 @@ Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o: \
  /home/gabrielchavesmartins/photobatch/ArgParser.h \
  /usr/include/c++/12/algorithm \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
- /home/gabrielchavesmartins/photobatch/utils.h
+ /home/gabrielchavesmartins/photobatch/utils.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h

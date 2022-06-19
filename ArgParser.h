@@ -96,8 +96,8 @@ class ArgParser{
 		std::string GetOptionAsString(const std::string& option) const {return GetOption(option);}
 		
 		// Parse the arguments list on argv
-		void Parse(int argc, char* argv[]){
-			if (argc > 1){
+		void Parse(int argc, const char* argv[]){
+			if (argc > 1 && argv != nullptr){
 				for (int index = 1; index < argc; ++index){
 					std::string arg = argv[index];
 					std::for_each(arg.begin(), arg.end(), [](char & c){

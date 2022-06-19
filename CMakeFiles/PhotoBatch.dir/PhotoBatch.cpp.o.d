@@ -148,6 +148,12 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/ext/aligned_buffer.h \
  /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
  /usr/include/c++/12/array /usr/include/c++/12/compare \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h \
  /home/gabrielchavesmartins/photobatch/ArgParser.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/12/map \
  /usr/include/c++/12/bits/stl_tree.h \

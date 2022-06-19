@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 #include <array>
-
+#include <limits.h>
 #include "ArgParser.h"
 #include "utils.h"
 #include "help.h"
@@ -207,7 +207,11 @@ const void ThrowExceptionArguments(const ArgParser& argparser){
 	
 
 
-int main(int argc, char* argv[]){
+int main(int argc, const char* argv[]){
+	if (argc >= INT_MAX || argc == -2147483648){
+		throw std::invalid_argument("For security purposes, this value isn't permitted");
+		
+	}	
 	setlocale(LC_ALL, "");
 	setlocale(LC_NUMERIC, "en_US");
 
