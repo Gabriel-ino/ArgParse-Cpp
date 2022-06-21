@@ -103,11 +103,13 @@ void RenameMode::RunImpl(){
 
 const std::string& GetInvalidChars(){
 	static const std::string invalidChars = "\\/*?\"<>|:";
+	std::cout << invalidChars << std::endl;
 	return invalidChars;
 }
 
 const bool HasInvalidChars(const std::string& passed_str){
         const bool verifier = passed_str.find_first_of(GetInvalidChars()) != std::string::npos;
+		std::cout << verifier << std::endl;
 	return verifier;
 
 }
@@ -151,9 +153,9 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 	//Validate passed filter
 	const std::string filter = argparser.GetOptionAsString(FILTER_OPTION);
 	bool checkBlankFilter = check_all_blank(filter);
-        if ((!filter.empty() && HasInvalidChars(filter)) || checkBlankFilter == false){
+        if ((!filter.empty() && HasInvalidChars(filter)) || checkBlankFilter == true){
 		std::stringstream concatenatedStrings;
-		concatenatedStrings << INVALID_CHARACTERS << GetInvalidChars();
+		concatenatedStrings << INVALID_CHARACTERS << GetInvalidChars() << "\nAND CANNOT BE EMPTY!";
 		throw std::invalid_argument(concatenatedStrings.str());
 		
 
