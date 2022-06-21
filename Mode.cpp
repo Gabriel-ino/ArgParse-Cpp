@@ -1,4 +1,5 @@
 #include "ArgParser.h"
+#include "RenameMode.h"
 #include "Mode.h"
 #include "help.h"
 
@@ -73,6 +74,9 @@ const std::string& Mode::GetFolder() const{
 	return m_Folder;
 }
 
+
+class Mode;
+
 void Mode::Run(){
 	//Measure operation time
 	//
@@ -81,24 +85,6 @@ void Mode::Run(){
 	//Read time at this point
 	//Calculate difference
 
-}
-
-RenameMode::RenameMode(const std::string& filter, const std::string& folder, const std::string& prefix, const int startNumber)
-	: Mode{ filter, folder }
-	, m_Prefix{ prefix }
-	, m_startNumber { startNumber }
-
-{
-
-}
-
-const std::string& RenameMode::GetModeName() const{
-	static const std::string RenameModeName = "[Rename]: ";
-	return RenameModeName;
-}
-
-void RenameMode::RunImpl(){
-	std::cout << GetModeName() << " running" << std::endl;
 }
 
 const std::string& GetInvalidChars(){
@@ -225,6 +211,8 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 			concatenatedErrors << INVALID_CHARACTERS << GetInvalidChars() << "\n" << "PREFIX CAN'T BE EMPTY OR BLANK!"; 
 			throw std::invalid_argument(concatenatedErrors.str());
 		}
+
+		return std::make_unique<RenameMode>(filter, folder, prefix, startNumber);
 	}
 
 	//Validate Convert Mode

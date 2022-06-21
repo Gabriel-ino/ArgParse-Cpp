@@ -7,7 +7,9 @@ add_executable(PhotoBatch
        	"ArgParser.h"
        	"utils.h"
 	"Mode.h"
-	"Mode.cpp")
+	"Mode.cpp"
+	"RenameMode.h"
+	"RenameMode.cpp")
 
 set_target_properties(PhotoBatch PROPERTIES CXX_STANDARD 17)
 

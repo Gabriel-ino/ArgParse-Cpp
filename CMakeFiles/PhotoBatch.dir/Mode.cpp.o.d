@@ -144,8 +144,8 @@ CMakeFiles/PhotoBatch.dir/Mode.cpp.o: \
  /usr/include/c++/12/bits/uniform_int_dist.h \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/gabrielchavesmartins/photobatch/Mode.h /usr/include/c++/12/memory \
- /usr/include/c++/12/bits/stl_uninitialized.h \
+ /home/gabrielchavesmartins/photobatch/RenameMode.h \
+ /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
  /usr/include/c++/12/bits/unique_ptr.h \
@@ -158,6 +158,7 @@ CMakeFiles/PhotoBatch.dir/Mode.cpp.o: \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
+ /home/gabrielchavesmartins/photobatch/Mode.h \
  /home/gabrielchavesmartins/photobatch/help.h \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/fstream \
  /usr/include/c++/12/bits/codecvt.h \

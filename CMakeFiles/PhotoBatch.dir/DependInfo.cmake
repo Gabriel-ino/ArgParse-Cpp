@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gabrielchavesmartins/photobatch/Mode.cpp" "CMakeFiles/PhotoBatch.dir/Mode.cpp.o" "gcc" "CMakeFiles/PhotoBatch.dir/Mode.cpp.o.d"
   "/home/gabrielchavesmartins/photobatch/PhotoBatch.cpp" "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o" "gcc" "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o.d"
+  "/home/gabrielchavesmartins/photobatch/RenameMode.cpp" "CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o" "gcc" "CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o.d"
   )
 
 # Targets to which this target links.

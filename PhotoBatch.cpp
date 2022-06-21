@@ -6,6 +6,8 @@
 #include <string>
 #include <limits.h>
 
+#include "RenameMode.h"
+
 #include "Mode.h"
 
 
@@ -24,6 +26,7 @@
 #define START_NUMBER_OPTION "startnumber"
 #define FROM_OPTION "from"
 #define TO_OPTION "to"
+
 
 #ifdef __unix__
     #include <stdlib.h>
@@ -74,8 +77,8 @@ int main(int argc, const char* argv[]){
 	           std::cerr << exception.what() << std::endl;
 	           RESET_TERMINAL;
                #else
-		   system("Color 04");
-		   std::cerr << exception.what() << std::endl;
+		       system("Color 04");
+		       std::cerr << exception.what() << std::endl;
 	       #endif
 	}
 

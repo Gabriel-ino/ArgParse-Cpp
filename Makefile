@@ -287,6 +287,30 @@ PhotoBatch.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.s
 .PHONY : PhotoBatch.cpp.s
 
+RenameMode.o: RenameMode.cpp.o
+.PHONY : RenameMode.o
+
+# target to build an object file
+RenameMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o
+.PHONY : RenameMode.cpp.o
+
+RenameMode.i: RenameMode.cpp.i
+.PHONY : RenameMode.i
+
+# target to preprocess a source file
+RenameMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/RenameMode.cpp.i
+.PHONY : RenameMode.cpp.i
+
+RenameMode.s: RenameMode.cpp.s
+.PHONY : RenameMode.s
+
+# target to generate assembly for a file
+RenameMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/RenameMode.cpp.s
+.PHONY : RenameMode.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -311,6 +335,9 @@ help:
 	@echo "... PhotoBatch.o"
 	@echo "... PhotoBatch.i"
 	@echo "... PhotoBatch.s"
+	@echo "... RenameMode.o"
+	@echo "... RenameMode.i"
+	@echo "... RenameMode.s"
 .PHONY : help
 
 

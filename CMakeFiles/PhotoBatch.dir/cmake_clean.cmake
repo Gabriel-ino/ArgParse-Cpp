@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PhotoBatch.dir/Mode.cpp.o.d"
   "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o"
   "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o.d"
+  "CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o"
+  "CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o.d"
   "PhotoBatch"
   "PhotoBatch.pdb"
 )
