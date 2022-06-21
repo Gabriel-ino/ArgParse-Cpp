@@ -12,7 +12,8 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(testArgumentParser
        	"testArgumentParser.cpp"
-	"${CMAKE_SOURCE_DIR}/ArgParser.h")
+	"${CMAKE_SOURCE_DIR}/ArgParser.h"
+	"${CMAKE_SOURCE_DIR}/utils.h")
 
 target_include_directories(testArgumentParser PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(testArgumentParser PRIVATE gtest_main)

@@ -1,6 +1,7 @@
-CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
- /home/gabrielchavesmartins/photobatch/PhotoBatch.cpp \
- /usr/include/stdc-predef.h /home/gabrielchavesmartins/photobatch/utils.h \
+CMakeFiles/PhotoBatch.dir/Mode.cpp.o: \
+ /home/gabrielchavesmartins/photobatch/Mode.cpp \
+ /usr/include/stdc-predef.h \
+ /home/gabrielchavesmartins/photobatch/ArgParser.h \
  /usr/include/c++/12/iostream \
  /usr/include/c++/12/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -128,7 +129,14 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/12/algorithm \
+ /usr/include/strings.h /usr/include/c++/12/map \
+ /usr/include/c++/12/bits/stl_tree.h \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
+ /usr/include/c++/12/bits/uses_allocator.h \
+ /usr/include/c++/12/bits/stl_multimap.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/algorithm \
  /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
@@ -136,21 +144,8 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/bits/uniform_int_dist.h \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/gabrielchavesmartins/photobatch/ArgParser.h \
- /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/stl_multimap.h \
- /usr/include/c++/12/bits/erase_if.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/limits.h \
- /usr/lib/gcc/x86_64-redhat-linux/12/include/syslimits.h \
- /usr/include/limits.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /home/gabrielchavesmartins/photobatch/Mode.h \
- /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_uninitialized.h \
+ /home/gabrielchavesmartins/photobatch/Mode.h /usr/include/c++/12/memory \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
  /usr/include/c++/12/bits/unique_ptr.h \
@@ -162,4 +157,23 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/backward/auto_ptr.h \
- /usr/include/c++/12/pstl/glue_memory_defs.h /usr/include/c++/12/stdlib.h
+ /usr/include/c++/12/pstl/glue_memory_defs.h \
+ /home/gabrielchavesmartins/photobatch/help.h \
+ /usr/include/c++/12/stdlib.h /usr/include/c++/12/fstream \
+ /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/compare /usr/include/c++/12/filesystem \
+ /usr/include/c++/12/bits/fs_fwd.h /usr/include/c++/12/bits/chrono.h \
+ /usr/include/c++/12/ratio /usr/include/c++/12/limits \
+ /usr/include/c++/12/ctime /usr/include/c++/12/bits/parse_numbers.h \
+ /usr/include/c++/12/bits/fs_path.h /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/time_members.h \
+ /usr/include/c++/12/x86_64-redhat-linux/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h /usr/include/c++/12/iomanip \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
+ /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
+ /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h

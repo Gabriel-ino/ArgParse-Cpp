@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.12)
 
 project(PhotoBatch)
 
-add_executable(PhotoBatch "PhotoBatch.cpp")
+add_executable(PhotoBatch
+       	"PhotoBatch.cpp"
+       	"ArgParser.h"
+       	"utils.h"
+	"Mode.h"
+	"Mode.cpp")
 
 set_target_properties(PhotoBatch PROPERTIES CXX_STANDARD 17)
 

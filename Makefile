@@ -239,6 +239,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+Mode.o: Mode.cpp.o
+.PHONY : Mode.o
+
+# target to build an object file
+Mode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/Mode.cpp.o
+.PHONY : Mode.cpp.o
+
+Mode.i: Mode.cpp.i
+.PHONY : Mode.i
+
+# target to preprocess a source file
+Mode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/Mode.cpp.i
+.PHONY : Mode.cpp.i
+
+Mode.s: Mode.cpp.s
+.PHONY : Mode.s
+
+# target to generate assembly for a file
+Mode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/Mode.cpp.s
+.PHONY : Mode.cpp.s
+
 PhotoBatch.o: PhotoBatch.cpp.o
 .PHONY : PhotoBatch.o
 
@@ -281,6 +305,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... testArgumentParser"
+	@echo "... Mode.o"
+	@echo "... Mode.i"
+	@echo "... Mode.s"
 	@echo "... PhotoBatch.o"
 	@echo "... PhotoBatch.i"
 	@echo "... PhotoBatch.s"

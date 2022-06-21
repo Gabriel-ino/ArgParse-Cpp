@@ -151,12 +151,12 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 CMakeFiles/PhotoBatch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=1,2 "Built target PhotoBatch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=1,2,3 "Built target PhotoBatch"
 .PHONY : CMakeFiles/PhotoBatch.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PhotoBatch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PhotoBatch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabrielchavesmartins/photobatch/CMakeFiles 0
 .PHONY : CMakeFiles/PhotoBatch.dir/rule
@@ -178,7 +178,7 @@ Tests/CMakeFiles/testArgumentParser.dir/all: _deps/googletest-build/googletest/C
 Tests/CMakeFiles/testArgumentParser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/testArgumentParser.dir/build.make Tests/CMakeFiles/testArgumentParser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=11,12 "Built target testArgumentParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=12,13 "Built target testArgumentParser"
 .PHONY : Tests/CMakeFiles/testArgumentParser.dir/all
 
 # Build rule for subdir invocation for target.
@@ -204,7 +204,7 @@ Tests/CMakeFiles/testArgumentParser.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=4,5 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +231,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=6,7 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +257,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=8,9 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +283,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabrielchavesmartins/photobatch/CMakeFiles --progress-num=10,11 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

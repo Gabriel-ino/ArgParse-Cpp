@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <utils.h>
 #include <ArgParser.h>
 #include <array>
 #include <string>

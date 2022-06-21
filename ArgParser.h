@@ -6,7 +6,7 @@
 #include <ctype.h>
 #include <map>
 #include <algorithm>
-#include "utils.h"
+//#include "utils.h"
 
 //Class used to read the arguments passed by the user on the terminal
 /* E.g.: ArgParser argparser;
@@ -16,6 +16,10 @@
  *
  * 
  * */
+
+bool check_all_blank(const std::string& val);
+bool check_blank_param(const std::string& flag);
+
 class ArgParser{
 	public:
 		// Register flag during parser
