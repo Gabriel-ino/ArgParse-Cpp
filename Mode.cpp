@@ -1,6 +1,7 @@
 #include "ArgParser.h"
 #include "RenameMode.h"
 #include "Mode.h"
+#include "ConvertMode.h"
 #include "help.h"
 
 #include <iostream>
@@ -8,6 +9,7 @@
 #include <array>
 #include <filesystem>
 #include <sstream>
+#include <chrono>
 
 #define RENAME_FLAG "rename"
 #define CONVERT_FLAG "convert"
@@ -81,21 +83,52 @@ void Mode::Run(){
 	//Measure operation time
 	//
 	//Read time at this point
+	std::chrono::high_resolution_clock::time_point startTime = std::chrono::high_resolution_clock::now();
 	RunImpl();
+	std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
 	//Read time at this point
 	//Calculate difference
 
+	std::chrono::high_resolution_clock::duration elapsedTime = endTime - startTime;
+	std::chrono::milliseconds elapsedTimeMilli = std::chrono::duration_cast<std::chrono::milliseconds>(elapsedTime);
+
+	std::cout << GetModeName() << "\nTime executed: " << elapsedTimeMilli.count() << "ms" << '\n';
+
+}
+
+std::vector<std::filesystem::path> Mode::GetFiles(const std::filesystem::path& extension="") const{
+	std::vector<std::filesystem::path> files;
+    int numSkippedFiles{0};
+
+    // Collect all files with the passed filter
+    for(const std::filesystem::directory_entry& entry : std::filesystem::directory_iterator(GetFolder())){
+
+        const bool bIsFile{std::filesystem::is_regular_file(entry.path())};
+        const bool bMatchFilter = GetFilter().empty() || (entry.path().string().find(GetFilter()) != std::string::npos);
+		const bool bMatchExtension{extension.empty() || (entry.path().extension() == extension)};
+
+        if (bIsFile && bMatchFilter && bMatchExtension){
+
+            files.push_back(entry.path());
+        }else{
+            numSkippedFiles++;
+            
+        }
+	}
+	std::cout << "Found files  : " << files.size() << '\n';
+    std::cout << "Ignored Files: " << numSkippedFiles << '\n';
+	return files;
 }
 
 const std::string& GetInvalidChars(){
 	static const std::string invalidChars = "\\/*?\"<>|:";
-	std::cout << invalidChars << std::endl;
+	std::cout << invalidChars << '\n';
 	return invalidChars;
 }
 
 const bool HasInvalidChars(const std::string& passed_str){
         const bool verifier = passed_str.find_first_of(GetInvalidChars()) != std::string::npos;
-		std::cout << verifier << std::endl;
+		std::cout << verifier << '\n';
 	return verifier;
 
 }
@@ -138,6 +171,8 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 
 	//Validate passed filter
 	const std::string filter = argparser.GetOptionAsString(FILTER_OPTION);
+
+	//std::for_each(filter.begin(), filter.end(), [](char & c){c = ::toupper(c);});
 	bool checkBlankFilter = check_all_blank(filter);
         if ((!filter.empty() && HasInvalidChars(filter)) || checkBlankFilter == true){
 		std::stringstream concatenatedStrings;
@@ -148,8 +183,8 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
        }
 
 	if (bResizeMode){
-		int width = 0;
-		int height = 0;
+		int width{0};
+		int height{0};
 
 		try{
 			width = argparser.GetOptionAsInt(WIDTH_OPTION);
@@ -199,8 +234,8 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 	
 	//Validate Rename Mode
 	if (bRenameMode){
-		int startNumber = argparser.GetOptionAsInt(START_NUMBER_OPTION);
-		std::string prefix = argparser.GetOptionAsString(PREFIX_OPTION);
+		int startNumber{argparser.GetOptionAsInt(START_NUMBER_OPTION)};
+		std::string prefix{argparser.GetOptionAsString(PREFIX_OPTION)};
 
 		if (startNumber < 0){
 			throw std::invalid_argument(START_NUMBER_ERROR);
@@ -220,10 +255,10 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 		const std::string from = argparser.GetOptionAsString(FROM_OPTION);
 		const std::string to = argparser.GetOptionAsString(TO_OPTION);
 
-		const std::array<std::string, 2> convertOptions = {"jpg", "png"};
+		const std::array<std::string, 3> convertOptions = {"jpg", "png", "JPG"};
 		const bool bIsFromValid = std::find(std::begin(convertOptions), std::end(convertOptions), from) != std::end(convertOptions);
-
 		const bool bIsToValid = std::find(std::begin(convertOptions), std::end(convertOptions), to) != std::end(convertOptions);
+
 
 		if (!bIsFromValid || !bIsToValid){
 			throw std::invalid_argument(INVALID_FORMAT);
@@ -232,6 +267,13 @@ std::unique_ptr<Mode> CreateMode(const ArgParser& argparser){
 		if (from == to){
 			throw std::invalid_argument(EQUAL_FORMAT_ERROR);
 		}
+
+		std::map<std::string, ConvertMode::Format> convertOptionsMap = {
+			{"jpg", ConvertMode::Format::JPG},
+			{"png", ConvertMode::Format::PNG}
+		};
+
+		return std::make_unique<ConvertMode>(filter, folder, convertOptionsMap.at(from), convertOptionsMap.at(to));
 
 	}
 

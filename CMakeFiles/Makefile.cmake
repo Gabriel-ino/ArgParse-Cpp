@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.2/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "External/CMakeLists.txt"
   "Tests/CMakeLists.txt"
   "_deps/googletest-src/CMakeLists.txt"
   "_deps/googletest-src/googlemock/CMakeLists.txt"
@@ -77,6 +78,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/googletest-build/googletest/generated/gtest.pc"
   "_deps/googletest-build/googletest/generated/gtest_main.pc"
   "_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/stbcontents-subbuild/CMakeLists.txt"
+  "External/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

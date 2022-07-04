@@ -239,6 +239,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+ConvertMode.o: ConvertMode.cpp.o
+.PHONY : ConvertMode.o
+
+# target to build an object file
+ConvertMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.o
+.PHONY : ConvertMode.cpp.o
+
+ConvertMode.i: ConvertMode.cpp.i
+.PHONY : ConvertMode.i
+
+# target to preprocess a source file
+ConvertMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.i
+.PHONY : ConvertMode.cpp.i
+
+ConvertMode.s: ConvertMode.cpp.s
+.PHONY : ConvertMode.s
+
+# target to generate assembly for a file
+ConvertMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.s
+.PHONY : ConvertMode.cpp.s
+
 Mode.o: Mode.cpp.o
 .PHONY : Mode.o
 
@@ -329,6 +353,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... testArgumentParser"
+	@echo "... ConvertMode.o"
+	@echo "... ConvertMode.i"
+	@echo "... ConvertMode.s"
 	@echo "... Mode.o"
 	@echo "... Mode.i"
 	@echo "... Mode.s"

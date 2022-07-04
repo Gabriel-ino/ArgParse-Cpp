@@ -177,4 +177,5 @@ CMakeFiles/PhotoBatch.dir/Mode.cpp.o: \
  /usr/include/c++/12/bits/locale_conv.h /usr/include/c++/12/iomanip \
  /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
- /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h
+ /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
+ /usr/include/c++/12/chrono

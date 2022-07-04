@@ -1,0 +1,3 @@
+/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate.dir
+/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-subbuild/CMakeFiles/edit_cache.dir
+/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-subbuild/CMakeFiles/rebuild_cache.dir

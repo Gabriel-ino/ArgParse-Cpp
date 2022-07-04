@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o CMakeFiles/PhotoBatch.dir/Mode.cpp.o CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o -o PhotoBatch 
+/usr/bin/c++ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o CMakeFiles/PhotoBatch.dir/Mode.cpp.o CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.o -o PhotoBatch 

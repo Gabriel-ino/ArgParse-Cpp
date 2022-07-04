@@ -5,6 +5,7 @@
 #include <locale.h>
 #include <string>
 #include <limits.h>
+#include <stb_image.h>
 
 #include "RenameMode.h"
 
@@ -30,7 +31,7 @@
 
 #ifdef __unix__
     #include <stdlib.h>
-    #define RESET_TERMINAL std::cout << "\033[1;0m \033[0m" << std::endl
+    #define RESET_TERMINAL std::cout << "\033[1;0m \033[0m" << '\n'
 #elif defined(_WIN32) || defined(WIN32)
     #include <windows.h>
     #define RESET_TERMINAL system("Color 07")
@@ -43,7 +44,7 @@ int main(int argc, const char* argv[]){
 	}
 	
 	Mode* mode = new RenameMode{"Filter", "Folder", "Prefix", 1234};
-	std::cout << mode->GetModeName() << std::endl;
+	std::cout << mode->GetModeName() << '\n';
 		
 	setlocale(LC_ALL, "");
 	setlocale(LC_NUMERIC, "en_US");
@@ -74,11 +75,11 @@ int main(int argc, const char* argv[]){
 	        PhotoBatchMode->Run();
 	}catch(const std::exception& exception){
                #ifdef __unix
-	           std::cerr << exception.what() << std::endl;
+	           std::cerr << exception.what() << '\n';
 	           RESET_TERMINAL;
                #else
 		       system("Color 04");
-		       std::cerr << exception.what() << std::endl;
+		       std::cerr << exception.what() << '\n';
 	       #endif
 	}
 

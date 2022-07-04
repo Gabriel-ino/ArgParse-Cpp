@@ -1,0 +1,50 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/gabrielchavesmartins/photobatch/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_f87f8 && [1/2] Building C object CMakeFiles/cmTC_f87f8.dir/src.c.o
+[2/2] Linking C executable cmTC_f87f8
+FAILED: cmTC_f87f8 
+: && /usr/bin/gcc  -rdynamic CMakeFiles/cmTC_f87f8.dir/src.c.o -o cmTC_f87f8   && :
+/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/../../../../x86_64-unknown-linux-gnu/bin/ld: CMakeFiles/cmTC_f87f8.dir/src.c.o: na função "main":
+src.c:(.text+0x3e): referência não definida para "pthread_create"
+/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/../../../../x86_64-unknown-linux-gnu/bin/ld: src.c:(.text+0x4a): referência não definida para "pthread_detach"
+/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/../../../../x86_64-unknown-linux-gnu/bin/ld: src.c:(.text+0x56): referência não definida para "pthread_cancel"
+/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/../../../../x86_64-unknown-linux-gnu/bin/ld: src.c:(.text+0x67): referência não definida para "pthread_join"
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/gabrielchavesmartins/photobatch/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_c7958 && [1/2] Building C object CMakeFiles/cmTC_c7958.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_c7958
+FAILED: cmTC_c7958 
+: && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_c7958.dir/CheckFunctionExists.c.o -o cmTC_c7958  -lpthreads && :
+/usr/lib/gcc/x86_64-unknown-linux-gnu/11.3.0/../../../../x86_64-unknown-linux-gnu/bin/ld: não foi possível localizar -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

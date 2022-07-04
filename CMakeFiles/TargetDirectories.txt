@@ -34,3 +34,9 @@
 /home/gabrielchavesmartins/photobatch/_deps/googletest-build/googletest/CMakeFiles/install.dir
 /home/gabrielchavesmartins/photobatch/_deps/googletest-build/googletest/CMakeFiles/install/local.dir
 /home/gabrielchavesmartins/photobatch/_deps/googletest-build/googletest/CMakeFiles/install/strip.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/edit_cache.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/rebuild_cache.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/list_install_components.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/install.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/install/local.dir
+/home/gabrielchavesmartins/photobatch/External/CMakeFiles/install/strip.dir

@@ -7,7 +7,7 @@
 #include <ctype.h>
 
 bool check_all_blank(const std::string& val){
-	bool isAllBlank = true;
+	bool isAllBlank {true};
 
 	for (const char& c : val){
 		if (!isblank(c)){

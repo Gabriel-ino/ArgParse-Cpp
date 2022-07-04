@@ -1,2 +1,2 @@
-# ArgParse-Cpp
-An ArgParser implementation made with C++ language
+# Photobatch-Cpp
+A file manipulation software with argparser in C++

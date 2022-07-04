@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.o"
+  "CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.o.d"
   "CMakeFiles/PhotoBatch.dir/Mode.cpp.o"
   "CMakeFiles/PhotoBatch.dir/Mode.cpp.o.d"
   "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o"

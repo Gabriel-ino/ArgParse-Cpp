@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-src -g -std=gnu++17 -o CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o -c /home/gabrielchavesmartins/photobatch/PhotoBatch.cpp",
+  "file": "/home/gabrielchavesmartins/photobatch/PhotoBatch.cpp"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-src -g -std=gnu++17 -o CMakeFiles/PhotoBatch.dir/Mode.cpp.o -c /home/gabrielchavesmartins/photobatch/Mode.cpp",
+  "file": "/home/gabrielchavesmartins/photobatch/Mode.cpp"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-src -g -std=gnu++17 -o CMakeFiles/PhotoBatch.dir/RenameMode.cpp.o -c /home/gabrielchavesmartins/photobatch/RenameMode.cpp",
+  "file": "/home/gabrielchavesmartins/photobatch/RenameMode.cpp"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/stbcontents-src -g -std=gnu++17 -o CMakeFiles/PhotoBatch.dir/ConvertMode.cpp.o -c /home/gabrielchavesmartins/photobatch/ConvertMode.cpp",
+  "file": "/home/gabrielchavesmartins/photobatch/ConvertMode.cpp"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/include -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest -g -o Tests/CMakeFiles/testArgumentParser.dir/testArgumentParser.cpp.o -c /home/gabrielchavesmartins/photobatch/Tests/testArgumentParser.cpp",
+  "file": "/home/gabrielchavesmartins/photobatch/Tests/testArgumentParser.cpp"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/include -I/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/include -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/include -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/include -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -I/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/include -I/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/gabrielchavesmartins/photobatch/build",
+  "command": "/usr/bin/g++ -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/include -isystem /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/gabrielchavesmartins/photobatch/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+}
+]

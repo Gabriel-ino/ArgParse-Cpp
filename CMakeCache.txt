@@ -282,18 +282,25 @@ FETCHCONTENT_BASE_DIR:PATH=/home/gabrielchavesmartins/photobatch/_deps
 // source dirs already exist
 FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 
-//Enables QUIET option for all content population
+//Desabilite quiet mode off FetchContent
 FETCHCONTENT_QUIET:BOOL=OFF
 
 //When not empty, overrides where to find pre-populated content
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for stbcontents
+FETCHCONTENT_SOURCE_DIR_STBCONTENTS:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of stbcontents
+FETCHCONTENT_UPDATES_DISCONNECTED_STBCONTENTS:BOOL=OFF
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
@@ -521,7 +528,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

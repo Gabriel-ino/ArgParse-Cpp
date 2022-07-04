@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate-complete.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-build.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-configure.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-download.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-install.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-patch.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-test.rule"
+		},
+		{
+			"file" : "/home/gabrielchavesmartins/photobatch/_deps/stbcontents-subbuild/stbcontents-populate-prefix/src/stbcontents-populate-stamp/stbcontents-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"stbcontents-populate"
+		],
+		"name" : "stbcontents-populate"
+	}
+}
